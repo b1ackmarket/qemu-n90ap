@@ -14,7 +14,8 @@ RELEASE_ARM_S5L8930X)的研究成果归档。
 | `hw/arm/k93ap.c` | 同一框架的 iPad 2,1 (A5) 机器模型 |
 | `patches/qemu-ios-n90ap.patch` | 对 QEMU fork 的全部必要改动(机器注册 + 调试设施) |
 | `tools/dt_inject_ramdisk.py` | 设备树 RAMDisk 属性注入工具(内核 rd=md0 根设备路径) |
-| `docs/PROGRESS-n90.md` | 每会话的调试过程与地面真相 |
+| `docs/PROGRESS-n90.md` | 每会话刷机调试过程与地面真相 |
+| `ios6-emu/` | 姊妹工作区(归档):iOS 6 固件解密工具链 + Unicorn 上跑真 dyld 的 Layer 2 实验(仅代码与记录,固件不入仓) |
 
 ## 机器布局
 
@@ -60,7 +61,8 @@ N90_RAMDISK=rd.raw ./qemu-system-arm \
 - `hw/intc/pl192.c` — VIC 中断线路日志(FIQ 排查用, 可关闭)
 - `target/arm/helpers.c` — 异常地址的 pc/lr/sp 日志(可关闭)
 
-iOS 固件(内核、DT)与解密工具不在此仓库 — 版权与体积原因。
+iOS 固件(内核、DT、rootfs)不在此仓库 — 版权与体积原因;
+iOS 6 系列的固件解密工具链单独归档在 `ios6-emu/`(见上表)。
 
 ## 进度(2026-10-05 归档)
 
